@@ -1,0 +1,10 @@
+
+.imageDiv{
+    display: flex;
+    justify-content: center;
+    /* border: 5px solid yellow */
+}
+#ksebImg{
+    height: 100px;
+    width: 100px;
+}
