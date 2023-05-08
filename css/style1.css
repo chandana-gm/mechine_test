@@ -5,6 +5,7 @@
     border: 1px solid #ccc;
     padding: 50px;
     border-radius: 10px;
+
 }
 
 .login-form h3 {
@@ -67,4 +68,9 @@ h4{
 }
 #amount{
     background-color: peachpuff;
+}
+.modal-content
+{
+    background-color: #D9EEE1;
+
 }
