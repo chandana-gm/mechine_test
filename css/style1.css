@@ -69,8 +69,7 @@ h4{
 #amount{
     background-color: peachpuff;
 }
-.modal-content
-{
-    background-color: #D9EEE1;
-
+a{
+    text-decoration: none;
+    color: #fff;
 }

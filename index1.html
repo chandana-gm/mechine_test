@@ -10,6 +10,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -20,11 +21,10 @@
         </div>
         <h4>Kerala State Eletricity Board</h4>
         <input type="text" id="name" placeholder="Name:">
-        <input type="number" id="consumerid" placeholder=" Last 5 digits of Consumer Id:">
+        <input type="number" id="consumerid" placeholder=" Consumer Id:">
         <input type="number" id="units" placeholder="Enter Used Units">
-        <!-- <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button> -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-            onclick="totalAmount()">Details</button>
+            onclick="totalAmount()" id="button" >Details</button>
     </div>
 
 
@@ -61,10 +61,8 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary"> Pay</button>
+                    <button type="button" class="btn btn-primary"><a href="index2.html">Pay</a> </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Reset</button>
-                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" -->
-                        <!-- onclick="close()">Close</button> -->
 
                 </div>
             </div>

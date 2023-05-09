@@ -1,26 +1,23 @@
+
+
 function totalAmount() {
     var name = document.getElementById("name").value
     var consumerid = document.getElementById("consumerid").value
     var units = document.getElementById("units").value
     var Amount = document.getElementById("amount")
 
+
     var usedunit = document.getElementById("usedunit")
     var name2 = document.getElementById("name2")
     var consumerid2 = document.getElementById("consumerid2")
 
-    var modal = document.getElementById("exampleModal")
-    var modalQuery = document.querySelector('#exampleModal')
-    var login = document.getElementById("login-form")
     name2.value = name
     consumerid2.value = consumerid
     usedunit.value = units
     if (name != "" && consumerid != "" && units != "") {
+        flag = true;
         console.log("inside");
-        // if (consumerid != 5) {
-        //     alert("incorrect consumer id")
-
-        //     return false
-        // }
+        var body = document.querySelector("body")
         if (units > 0 && units < 100) {
             var total = units * 5
             Amount.value = total
@@ -28,6 +25,9 @@ function totalAmount() {
         }
         else if (units >= 100 && units < 150) {
             var total1 = units * 5
+
+
+
             console.log(total1);
             var total2 = units - 100
             console.log(total2);
@@ -57,43 +57,30 @@ function totalAmount() {
 
         }
         else {
+            
+
             console.log("THE UNIT VALUE CANNOT BE ZERO");
             alert("THE UNIT VALUE CANNOT BE ZERO")
-            // modal.style.display = "none";
-            var body = document.querySelector("body")
-            var modalBackDrop = document.querySelector(".modal-backdrop")
-            modalBackDrop.classList.remove('modal-backdrop')
-            body.classList.remove('modal-open')
-            // modal.classList.add("d-none");        
-            modalQuery.parentNode.removeChild(modalQuery);
-            // body.classList.remove('modal-show')
-            // modal.classList.add("d-none");
-            // login.style.display = "block";
-            // return false
+            $('body').removeClass("modal-open");
+            $('.modal-backdrop').remove();
+            $('#exampleModal').modal('hide');
+        
         }
 
 
 
     }
     else {
-        alert("enter the values properly")
-        var body = document.querySelector("body")
-        var modalBackDrop = document.querySelector(".modal-backdrop")
-        modalBackDrop.classList.remove('modal-backdrop')
-        body.classList.remove('modal-open')
-        // modal.classList.add("d-none");        
-        modalQuery.parentNode.removeChild(modalQuery);
 
+        alert("enter the values properly");
+        $('body').removeClass("modal-open");
+        $('.modal-backdrop').remove();
+        $('#exampleModal').modal('hide');
 
     }
+    
+
+
 }
 
-// function close(){
-//     var name = document.getElementById("name")
-//     var consumerid = document.getElementById("consumerid")
-//     var units = document.getElementById("units")
 
-//     name.value = ""
-//     consumerid.value = ""
-//     units.value =""
-// }
